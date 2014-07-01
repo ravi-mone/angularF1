@@ -1,14 +1,15 @@
 This is AngularF1 demo
+Not a Node js based project.
 Installation
 
     
-Add the Virtual host in your Apache and configure the path of the project accordingly.
+Add the Virtual host in your Apache (lets say xapp or wamp) and configure the path of the project accordingly.
 
     <VirtualHost *:80>
      ServerName angularAuth.net
-     DocumentRoot "D:/Angular_Work_Space/angularAuth/app" //change here
+     DocumentRoot "D:/Angular_Work_Space/angularAuth/app" #change here
         DirectoryIndex index.html
-        <Directory "D:/Angular_Work_Space/angularAuth/app"> //change here
+        <Directory "D:/Angular_Work_Space/angularAuth/app"> #change here
             AllowOverride All
             Allow from All
         </Directory>
