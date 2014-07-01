@@ -1,4 +1,5 @@
-This is AngularF1 demo
+This is AngularF1 demo.
+
 Not a Node js based project.
 Installation
 
