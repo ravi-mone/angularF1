@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="app/bower_components/angular"/>
+	<classpathentry kind="src" path="app/bower_components/angular-loading-bar/src"/>
+	<classpathentry kind="src" path="app/bower_components/angular-resource"/>
+	<classpathentry kind="src" path="app/bower_components/angular-route"/>
+	<classpathentry kind="src" path="app/bower_components/angular-slider-master"/>
+	<classpathentry kind="src" path="app/bower_components/bootstrap/dist/js"/>
+	<classpathentry kind="src" path="app/bower_components/ng-facebook"/>
+	<classpathentry excluding="decorators/|directives/|filters/|controllers/|services/" kind="src" path="app/scripts"/>
+	<classpathentry kind="src" path="app/scripts/controllers"/>
+	<classpathentry kind="src" path="app/scripts/decorators"/>
+	<classpathentry kind="src" path="app/scripts/directives"/>
+	<classpathentry kind="src" path="app/scripts/filters"/>
+	<classpathentry kind="src" path="app/scripts/services"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
