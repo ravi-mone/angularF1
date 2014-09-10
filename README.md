@@ -14,8 +14,7 @@ So the application should be like '/var/www/angularF1
 Then opening the project by following the url in your favorite browser : http://localhost/angularF1/app/
 
 Login Credentials :
-User Name : demo
-password: demo123
+UserName/password : demo/demo123
 
 Home Page 
 <img height="225" width="400" src="homepage.png" border="0" />
