@@ -48,7 +48,7 @@ angAuth.directive("tree", function ($compile) {
 
             //We are removing the contents/innerHTML from the element we are going to be applying the
             //directive to and saving it to adding it below to the $compile call as the template
-            //console.log(tElement);
+
             var contents = tElement.contents().remove();
 
             var compiledContents;

@@ -3,8 +3,8 @@
  */
 'use strict';
 
-angAuth.factory('raceProviders', function ($q, $http, AppConstants, $resource, log) {
-    var ergastAPI = {};
+angAuth.factory('raceProviders', function ($q, $http, AppConstants, $resource) {
+
     return{
 
        getDrivers : function() {
@@ -21,6 +21,18 @@ angAuth.factory('raceProviders', function ($q, $http, AppConstants, $resource, l
                 method: 'JSONP',
                 url: AppConstants.appPath+'drivers/'+ id +'/driverStandings.json?callback=JSON_CALLBACK'
             });
+        },
+        getLoginDetails : function() {
+            return $http({
+                method: 'GET',
+                url: AppConstants.ServerPath+'/login.json'
+            });
+        },
+        setUserDetails: function(userDetails){
+            this.userDetails = userDetails;
+        },
+        getUserDetails: function(){
+           return this.userDetails;
         }
     }
 });

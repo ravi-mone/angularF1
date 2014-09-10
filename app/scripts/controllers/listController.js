@@ -8,7 +8,6 @@ angAuth.controller('listController', function ($scope, $routeParams, $http, AppC
     $http.get(AppConstants.ServerPath+'/results.json').success(function(response){
         if(response[$routeParams.id]) {
             $scope.races = response[$routeParams.id].RaceTable.Races;
-            //console.log($scope.races);
             $scope.driver = $scope.races[0].Results[0];
         }else{
             //For others load default

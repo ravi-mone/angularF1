@@ -1,6 +1,6 @@
 'use strict';
 
-angAuth.controller('homeController', function ($scope, raceProviders, $filter, $routeParams, $http, $facebook) {
+angAuth.controller('homeController', function ($scope, raceProviders) {
     $scope.driversList=[];
     var data;
     raceProviders.getDrivers().then(function (response) {
@@ -16,10 +16,6 @@ angAuth.controller('homeController', function ($scope, raceProviders, $filter, $
         $scope.pageSelected = data.length;
     });
 
-    var colors = ['red', 'green', 'blue'];
-    colors.forEach(function(color) {
-        console.log(color);
-    });
 
     //Function called for slider, observe the position object and filter the drivers accordingly.
     $scope.sliderFilter={
@@ -52,7 +48,7 @@ angAuth.controller('homeController', function ($scope, raceProviders, $filter, $
         $scope.sliderFilter.selectedFilter = selectedFilter;
     };
 
-    $scope.$watch('sliderFilter', function(newValue, oldValue){
+    $scope.$watch('sliderFilter', function(){
         $scope.data = $scope.driversList.filter(function(driver){
             if(parseInt(driver[$scope.sliderFilter.selectedFilter]) >= parseInt($scope.sliderFilter[$scope.sliderFilter.selectedFilter].from)
                 && parseInt(driver[$scope.sliderFilter.selectedFilter]) <= parseInt($scope.sliderFilter[$scope.sliderFilter.selectedFilter].to)){
@@ -77,13 +73,15 @@ angAuth.controller('homeController', function ($scope, raceProviders, $filter, $
     $scope.filterByNames = function() {
         data = $scope.driversList;
         $scope.pageSelected=data.length;
+
         /*The filter() method creates a new array with all elements that pass the test implemented by the provided function.
          * refer: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
          * */
         $scope.data = data.filter(function(Obj){
+
             return filterObj(Obj, Obj.Driver.givenName);
         });
-    }
+    };
 
     //Function called when the user selects the "Show x Records" list.
     $scope.showSelected = function(pageSelected) {
@@ -92,7 +90,7 @@ angAuth.controller('homeController', function ($scope, raceProviders, $filter, $
         }else{
             $scope.pageSelected = $scope.data.length;
         }
-    }
+    };
 
     //This function is required to sort the columns having number values like 'points', 'position' and 'wins' column
     var filter = { };
@@ -134,7 +132,7 @@ angAuth.directive('modifySlider', function ($parse) {
         replace :true,
         template: '<div ng-transclude></div>',
         link: function(scope, tElement, tAttrs){
-            console.log(scope);
+
         }
     }
 });
