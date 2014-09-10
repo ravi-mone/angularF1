@@ -1,12 +1,26 @@
 This is AngularF1 demo.
+=======================
 
-Not a Node js based project.
-Installation
+Note : Not a Node js based project.
 
-Pull the project to your apache working directory,
- Ex: in ubuntu, the working directory is (/var/www/)
 
-Then opening the project by following the url :
-http://localhost/angularF1/app/
+Installation:
+==================
+
+Pull the project to your apache working directory, Ex: in ubuntu, the working directory is (/var/www/)
+So the application should be like '/var/www/angularF1
+
+
+Then opening the project by following the url in your favorite browser : http://localhost/angularF1/app/
+
+Login Credentials :
+User Name : demo
+password: demo123
+
+Home Page 
+<img height="225" width="400" src="homepage.png" border="0" />
+
+
+
 
 
